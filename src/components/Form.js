@@ -14,6 +14,8 @@ class App extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleCommentChange = this.handleCommentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    this.handleLeave = this.handleLeave.bind(this);
   }
 
   handleNameChange(event) {
@@ -65,6 +67,28 @@ class App extends React.Component {
     document.querySelector("#comment-input").value = "";
   }
 
+  handleHover(event) {
+    // event.preventDefault();
+
+    const hovered = event.target.id;
+
+    for (let i = 1; i <= hovered; i++) {
+      const star = document.getElementById(i);
+      star.innerText = "⭑";
+    }
+
+    for (let i = hovered + 1; i <= 5; i++) {
+      const star = document.getElementById(i);
+      star.innerText = "☆";
+    }
+  }
+
+  handleLeave(event) {
+    const stars = document.querySelectorAll(".star");
+
+    stars.forEach(star => (star.innerText = "☆"));
+  }
+
   render() {
     return (
       <form className="app__form" onSubmit={this.handleSubmit}>
@@ -84,6 +108,50 @@ class App extends React.Component {
           onChange={this.handleEmailChange}
           required
         />
+
+        <div id="app__form__rating">
+          <span
+            className="star"
+            id="1"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleLeave}
+          >
+            ☆
+          </span>
+          <span
+            className="star"
+            id="2"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleLeave}
+          >
+            ☆
+          </span>
+          <span
+            className="star"
+            id="3"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleLeave}
+          >
+            ☆
+          </span>
+          <span
+            className="star"
+            id="4"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleLeave}
+          >
+            ☆
+          </span>
+          <span
+            className="star"
+            id="5"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleLeave}
+          >
+            ☆
+          </span>
+        </div>
+
         <label>Comment</label>
         <input
           id="comment-input"
