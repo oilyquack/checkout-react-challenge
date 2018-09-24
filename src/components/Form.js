@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 class App extends React.Component {
   constructor(props) {
@@ -7,15 +8,15 @@ class App extends React.Component {
     this.state = {
       name: "",
       email: "",
-      comment: ""
+      comment: "",
+      rating: null
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleCommentChange = this.handleCommentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleHover = this.handleHover.bind(this);
-    this.handleLeave = this.handleLeave.bind(this);
+    this.ratingReceiver = this.ratingReceiver.bind(this);
   }
 
   handleNameChange(event) {
@@ -42,16 +43,24 @@ class App extends React.Component {
     });
   }
 
+  ratingReceiver(currentRating) {
+    this.setState({
+      rating: currentRating
+    });
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     const name = this.state.name;
     const email = this.state.email;
     const comment = this.state.comment;
+    const rating = this.state.rating;
 
     const newReview = {
       name,
       email,
-      comment
+      comment,
+      rating
     };
 
     this.props.receiver(newReview);
@@ -59,33 +68,14 @@ class App extends React.Component {
     this.setState({
       name: "",
       email: "",
-      comment: ""
+      comment: "",
+      rating: null
     });
 
     document.querySelector("#name-input").value = "";
     document.querySelector("#email-input").value = "";
     document.querySelector("#comment-input").value = "";
-  }
-
-  handleHover(event) {
-    // event.preventDefault();
-
-    const hovered = event.target.id;
-
-    for (let i = 1; i <= hovered; i++) {
-      const star = document.getElementById(i);
-      star.innerText = "⭑";
-    }
-
-    for (let i = hovered + 1; i <= 5; i++) {
-      const star = document.getElementById(i);
-      star.innerText = "☆";
-    }
-  }
-
-  handleLeave(event) {
     const stars = document.querySelectorAll(".star");
-
     stars.forEach(star => (star.innerText = "☆"));
   }
 
@@ -108,49 +98,11 @@ class App extends React.Component {
           onChange={this.handleEmailChange}
           required
         />
-
-        <div id="app__form__rating">
-          <span
-            className="star"
-            id="1"
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleLeave}
-          >
-            ☆
-          </span>
-          <span
-            className="star"
-            id="2"
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleLeave}
-          >
-            ☆
-          </span>
-          <span
-            className="star"
-            id="3"
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleLeave}
-          >
-            ☆
-          </span>
-          <span
-            className="star"
-            id="4"
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleLeave}
-          >
-            ☆
-          </span>
-          <span
-            className="star"
-            id="5"
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleLeave}
-          >
-            ☆
-          </span>
-        </div>
+        <label>Rating</label>
+        <Rating
+          rating={this.state.rating}
+          ratingReceiver={this.ratingReceiver}
+        />
 
         <label>Comment</label>
         <input
