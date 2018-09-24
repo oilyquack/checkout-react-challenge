@@ -5,7 +5,7 @@ function Comment({ review }) {
     let ratingHTML = "";
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        ratingHTML += `⭑`;
+        ratingHTML += `★`;
       } else {
         ratingHTML += `☆`;
       }
