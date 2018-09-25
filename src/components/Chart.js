@@ -19,7 +19,8 @@ function Chart({ reviews }) {
 
   const options = {
     chart: {
-      type: "bar"
+      type: "bar",
+      width: 600
     },
     xAxis: {
       categories: ["1", "2", "3", "4", "5"]
