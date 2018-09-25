@@ -113,7 +113,6 @@ class App extends React.Component {
           id="comment-input"
           placeholder="Comment"
           type="text"
-          maxLength="280"
           onChange={this.handleCommentChange}
           required
         />
