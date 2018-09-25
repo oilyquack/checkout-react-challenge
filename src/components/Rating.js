@@ -23,7 +23,6 @@ function Rating({ rating, ratingReceiver }) {
       for (let i = 1; i <= 5; i++) {
         const star = document.getElementById(i);
         if (i <= rating) {
-          console.log(star);
           star.innerText = "★";
         } else {
           star.innerText = "☆";

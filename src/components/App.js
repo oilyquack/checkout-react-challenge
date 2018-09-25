@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./Form";
 import Comments from "./Comments";
+import Chart from "./Chart";
 
 class App extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class App extends React.Component {
       <div className="app">
         <h1>Checkout Form</h1>
         <Form receiver={this.receiver} />
+        <Chart reviews={this.state.reviews} />
         <Comments reviews={this.state.reviews} />
       </div>
     );

@@ -105,7 +105,7 @@ class App extends React.Component {
         />
 
         <label>Comment</label>
-        <input
+        <textarea
           id="comment-input"
           placeholder="Comment"
           type="text"
