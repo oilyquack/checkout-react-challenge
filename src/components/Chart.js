@@ -22,6 +22,9 @@ function Chart({ reviews }) {
       type: "bar",
       width: 600
     },
+    title: {
+      text: "Reviews"
+    },
     xAxis: {
       categories: ["1", "2", "3", "4", "5"]
     },
