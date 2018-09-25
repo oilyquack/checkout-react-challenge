@@ -11,15 +11,12 @@ body {
   height: 100%;
   margin: 5px;
   background: rgb(197, 233, 246);
-}
-
-body {
-  margin: 0;
   color: rgb(76, 72, 69);
 }
 
 h1,
 h2 {
+  text-align: center;
   font-family: "Playfair Display", serif;
   color: rgb(1, 58, 81);
 }
@@ -29,7 +26,13 @@ p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.app__form {
+.app__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__input__form {
   background: rgb(207, 219, 223);
   margin: 4px;
   padding: 15px;
@@ -38,7 +41,7 @@ p {
 
 input,
 textarea {
-  width: 70vw;
+  width: 72vw;
   font-size: 16px;
 }
 
@@ -57,6 +60,32 @@ button {
   text-align: center;
 }
 
+.app__comments,
+h2 {
+  text-align: left;
+}
+
+.app__comments__comment {
+  background: rgb(192, 216, 224);
+}
+
 .app__comments__comment:nth-child(even) {
-  background: rgb(216, 216, 216);
+  background: rgb(197, 206, 209);
+}
+
+@media (min-width: 768px) {
+  .app__input {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .app__input__form {
+    width: 40vw;
+  }
+
+  input,
+  textarea {
+    width: 35vw;
+    font-size: 18px;
+  }
 }

@@ -24,6 +24,7 @@
     "highcharts-react-official": "^1.4.0",
     "highstock-release": "^6.0.4",
     "i": "^0.3.6",
+    "jest": "^23.6.0",
     "npm": "^6.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

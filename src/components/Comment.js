@@ -13,6 +13,8 @@ function Comment({ review }) {
     return ratingHTML;
   }
 
+  modules.export.starGen = starGen;
+
   return (
     <div className="app__comments__comment">
       <h2>{review.name}</h2>

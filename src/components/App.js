@@ -24,8 +24,10 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1>Checkout Form</h1>
-        <Form receiver={this.receiver} />
-        <Chart reviews={this.state.reviews} />
+        <div className="app__input">
+          <Form receiver={this.receiver} />
+          <Chart reviews={this.state.reviews} />
+        </div>
         <Comments reviews={this.state.reviews} />
       </div>
     );

@@ -85,7 +85,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <form className="app__form" onSubmit={this.handleSubmit}>
+      <form className="app__input__form" onSubmit={this.handleSubmit}>
         <label>Name</label>
         <input
           id="name-input"

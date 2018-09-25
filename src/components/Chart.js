@@ -20,7 +20,8 @@ function Chart({ reviews }) {
   const options = {
     chart: {
       type: "bar",
-      width: 600
+      width: 400,
+      height: 268
     },
     title: {
       text: "Reviews"
@@ -32,7 +33,7 @@ function Chart({ reviews }) {
   };
 
   return (
-    <div>
+    <div className="app__input__chart">
       <HighchartsReact
         highcharts={Highcharts}
         constructorType="chart"
