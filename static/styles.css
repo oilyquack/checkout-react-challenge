@@ -57,6 +57,6 @@ button {
   text-align: center;
 }
 
-.app__comments__comment::nth-child(even) {
-  color: rgb(216, 216, 216);
+.app__comments__comment:nth-child(even) {
+  background: rgb(216, 216, 216);
 }

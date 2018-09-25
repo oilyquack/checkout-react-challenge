@@ -51,32 +51,36 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const name = this.state.name;
-    const email = this.state.email;
-    const comment = this.state.comment;
-    const rating = this.state.rating;
+    if (this.state.rating === null) {
+      alert("Please select a rating before submitting");
+    } else {
+      const name = this.state.name;
+      const email = this.state.email;
+      const comment = this.state.comment;
+      const rating = this.state.rating;
 
-    const newReview = {
-      name,
-      email,
-      comment,
-      rating
-    };
+      const newReview = {
+        name,
+        email,
+        comment,
+        rating
+      };
 
-    this.props.receiver(newReview);
+      this.props.receiver(newReview);
 
-    this.setState({
-      name: "",
-      email: "",
-      comment: "",
-      rating: null
-    });
+      this.setState({
+        name: "",
+        email: "",
+        comment: "",
+        rating: null
+      });
 
-    document.querySelector("#name-input").value = "";
-    document.querySelector("#email-input").value = "";
-    document.querySelector("#comment-input").value = "";
-    const stars = document.querySelectorAll(".star");
-    stars.forEach(star => (star.innerText = "☆"));
+      document.querySelector("#name-input").value = "";
+      document.querySelector("#email-input").value = "";
+      document.querySelector("#comment-input").value = "";
+      const stars = document.querySelectorAll(".star");
+      stars.forEach(star => (star.innerText = "☆"));
+    }
   }
 
   render() {
