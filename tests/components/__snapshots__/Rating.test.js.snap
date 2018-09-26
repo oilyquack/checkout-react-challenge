@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div
+  id="app__form__rating"
+>
+  <span
+    className="star"
+    id="1"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    className="star"
+    id="2"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    className="star"
+    id="3"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    className="star"
+    id="4"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    className="star"
+    id="5"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    ☆
+  </span>
+</div>
+`;

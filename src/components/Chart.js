@@ -34,11 +34,13 @@ function Chart({ reviews }) {
 
   return (
     <div className="app__input__chart">
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType="chart"
-        options={options}
-      />
+      {!!reviews.length && (
+        <HighchartsReact
+          highcharts={Highcharts}
+          constructorType="chart"
+          options={options}
+        />
+      )}
     </div>
   );
 }
