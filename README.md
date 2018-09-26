@@ -15,6 +15,7 @@ This application has been created using `react` and uses `HighCharts.js` to crea
 
 - I am very pleased with the way I have implemented the star rating feature. I could have quite quickly added a drop down menu with options, but that isn't something that I thought would look particularly nice on the page or be a user friendly experience. I spent some time looking into how other websites present this option (Just Eat, Amazon, etc.) and came up with a plan to create my own version. I'm sure that in places it can be tidied and made more succinct, but as my first attempt at a star rating system I am pleased.
 - While the styling is fairly minimal (see below section), I have been able to create a fairly responsive user experience that can handle being used on different devices.
+- At device widths above mobile, I have added an overflow scroll to the comments section in order to keep the page as uncluttered as possible, especially with the possibility of hundreds/thousands of reviews being submitted.
 
 ## Unresolved Issues/Un-implemented Features
 
@@ -23,7 +24,7 @@ While I'm happy with the work that I am submitting, there is more that I would h
 - I have tried to implement some basic styling to make the product user friendly and have some level of intuition as to how to use certain features. However, given more time there is more I would have liked to do. For instance, have hidable/collapsable elements.
 - The chart proved to be an interesting challenge. I'm happy with how it turned out, but there are small features that I would like to change with some extra time. For instance, the total axis give options for values with decimal places which can't happen in this use case, so I would like to change the distance between those points. I would like to spend a little more time working through the documentation and getting to know how the config is constructed to create more fully featured and controlable charts in the future.
 - The charts also caused some issues when creating snapshots and testing elements. I was able to partially get around this by conditionally rendering the graph only if there are reviews, which I feel makes the user experience a bit friendlier as an empty graph on the page looked fairly cumbersome to me. For this reason, I do not have a snapshot for the `Chart.js` component. I'd like to dig a little deeper and find a solution for this.
-- Features that may have been interesting to include are pagination on the reviews
+- The overflow scroll on the comments has made the user experience a bit nicer, but it may have also been good to include pagination of comments.
 
 ## Acknowledgements
 
