@@ -1,7 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
 
-class App extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
 
@@ -122,4 +122,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Form;
