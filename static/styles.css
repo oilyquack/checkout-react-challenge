@@ -81,7 +81,7 @@ h2 {
 @media (min-width: 768px) {
   .app__input {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .app__input__form {

@@ -27,7 +27,15 @@ function Chart({ reviews }) {
       text: "Reviews"
     },
     xAxis: {
-      categories: ["1", "2", "3", "4", "5"]
+      categories: ["1", "2", "3", "4", "5"],
+      title: {
+        text: "Star Rating"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Total"
+      }
     },
     series: [{ data: series }]
   };
