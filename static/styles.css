@@ -94,3 +94,11 @@ h2 {
     font-size: 18px;
   }
 }
+
+@media (min-width: 1200px) {
+  input,
+  textarea {
+    width: 38vw;
+    font-size: 18px;
+  }
+}
