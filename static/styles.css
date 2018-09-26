@@ -93,6 +93,11 @@ h2 {
     width: 35vw;
     font-size: 18px;
   }
+
+  .app__comments {
+    max-height: 50vh;
+    overflow: scroll;
+  }
 }
 
 @media (min-width: 1200px) {
